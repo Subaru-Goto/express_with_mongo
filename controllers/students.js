@@ -20,7 +20,7 @@ export const iNameYouBobJohn = tryAndCatch(
       { name:"john" }, { name:"bob" }, { new: true }
       );
     if (data.length === 0) {
-      return next( {statusCode:400, message:"Failed to add a student data."} );
+      return next( {statusCode:400, message:"Failed to name you bob."} );
     } else {
       res.status(200).send(data);
     }
@@ -31,7 +31,7 @@ export const getStudents = tryAndCatch(
   async (req, res, next) => {
     const data = await Student.find();
     if (data.length === 0) {
-      return next( {statusCode:400, message:"Failes to name you bob."} );
+      return next( {statusCode:400, message:"Failed to get student data."} );
     } else {
       res.status(200).send(data);
     }
