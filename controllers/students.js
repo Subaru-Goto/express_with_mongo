@@ -9,7 +9,7 @@ export const addStudent = tryAndCatch(
     if (data.length === 0) {
       return next( {statusCode:400, message:"Failed to add a student data."} );
     } else {
-      res.status(200).send(data);
+      res.status(201).send(data);
     }
   }
 );
@@ -22,7 +22,7 @@ export const iNameYouBobJohn = tryAndCatch(
     if (data.length === 0) {
       return next( {statusCode:400, message:"Failed to add a student data."} );
     } else {
-      res.status(201).send(data);
+      res.status(200).send(data);
     }
   }
 );
