@@ -33,7 +33,7 @@ export const getStudents = tryAndCatch(
     if (data.length === 0) {
       return next( {statusCode:400, message:"Failes to name you bob."} );
     } else {
-      res.status(200).send(data);
+      res.status(201).send(data);
     }
   }
 );
