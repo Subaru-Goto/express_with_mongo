@@ -31,7 +31,7 @@ export const getStudents = tryAndCatch(
   async (req, res, next) => {
     const data = await Student.find();
     if (data.length === 0) {
-      return next( {statusCode:400, message:"Failed to get students data."} );
+      return next( {statusCode:400, message:"Failes to name you bob."} );
     } else {
       res.status(200).send(data);
     }
