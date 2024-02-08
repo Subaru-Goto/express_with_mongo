@@ -33,7 +33,7 @@ export const getStudents = tryAndCatch(
     if (data.length === 0) {
       return next( {statusCode:400, message:"Failed to get student data."} );
     } else {
-      res.status(200).send(data);
+      res.status(200).json(data);
     }
   }
 );
